@@ -1,0 +1,9 @@
+{
+    "heroku": {
+        "title": "div[class='page-body'] h1",
+        "tableDataClick": "//summary[normalize-space()='Table Data']",
+        "dataBoxInput": "//textarea[@id='jsondata']",
+        "refreshTableButton": "(//button[normalize-space()='Refresh Table'])[1]",
+        "dataValue": "//table[@id='dynamictable']/tr/td"
+    }
+}

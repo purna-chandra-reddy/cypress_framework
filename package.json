@@ -1,0 +1,19 @@
+{
+  "name": "cypress-automation",
+  "version": "1.0.0",
+  "description": "Cypress Automation by pcr",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "delete:reportFolder": "rm -rf mochawesome-report/",
+    "test:cli": "npm run delete:reportFolder && cypress run",
+    "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-combined-report.json",
+    "create:html:report": "npm run merge:reports && marge --reportDir TestReport cypress-combined-report.json"
+  },
+  "author": "pcr",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.3.0",
+    "cypress-xpath": "^2.0.1"
+  }
+}
